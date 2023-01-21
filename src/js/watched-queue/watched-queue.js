@@ -74,7 +74,7 @@ function onQueueButton() {
   }
   LocalStgQueueData = JSON.parse(localStorage.getItem(LOCAL_STORGE_QUEUE));
   let LocalStgData = LocalStgQueueData;
-  console.log(LocalStgData);
+ 
 
   if (
     localStorage.getItem(LOCAL_STORGE_WATCHED) == null ||
@@ -89,9 +89,7 @@ function onQueueButton() {
 
 export function markupCard(LocalStgData) {
   const markup = LocalStgData.map(({ alt, date, genre, id, src, vote }) => {
-    // const production_date = date.slice(0, 4);
-    // const rating = Number(vote).toFixed(1);
-    const rating = Number(vote);
+     const rating = Number(vote);
     return `
                 <li class="gallery__item card-set" data-id="${id}">
         <div class="img-wrap">
