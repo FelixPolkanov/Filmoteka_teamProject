@@ -80,10 +80,7 @@ function onQueueButton() {
     localStorage.getItem(LOCAL_STORGE_WATCHED) == null ||
     JSON.parse(localStorage.getItem(LOCAL_STORGE_WATCHED)).length == 0
   ) {
-    console.log(
-      'onWatchedButton внутри функции onQUEUE',
-      localStorage.getItem(LOCAL_STORGE_WATCHED)
-    );
+   
     addImgIfLocalStgEmpty();
     refs.watchedButton.addEventListener('click', onWatchedButton);
   }
